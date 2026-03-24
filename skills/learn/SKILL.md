@@ -60,14 +60,6 @@ for dir in ~/.claude/projects/*/memory; do
   mkdir -p "/Users/edevard/claude-config/memory/$projname"
   rsync -a "$dir/" "/Users/edevard/claude-config/memory/$projname/"
 done
-
-# Sync CLAUDE.md from known project repos
-for repo in /Users/edevard/Tennis-bot /Users/edevard/alpine-wind /Users/edevard/maritime-benchmark; do
-  if [ -f "$repo/CLAUDE.md" ]; then
-    name=$(basename "$repo")
-    cp "$repo/CLAUDE.md" "/Users/edevard/claude-config/claude-md/${name}.CLAUDE.md"
-  fi
-done
 ```
 
 ### 5. Commit and Push
