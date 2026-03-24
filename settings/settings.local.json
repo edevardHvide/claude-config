@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(claude plugin:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(npx:*)",
+      "Bash(npm search:*)",
+      "Bash(npm view:*)",
+      "Bash(gh auth:*)",
+      "Bash(brew install:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh issue:*)",
+      "Bash(aws --version)",
+      "Bash(aws configure:*)",
+      "Bash(aws dynamodb:*)",
+      "Bash(find /Users/edevard -maxdepth 3 -type d -name *maritime* -o -name *report*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \":*)",
+      "WebFetch(domain:www.skuld.com)",
+      "WebFetch(domain:www.gard.no)"
+    ]
+  }
+}
