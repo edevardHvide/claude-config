@@ -6,3 +6,4 @@
 - [feedback_shell_cwd_reset.md](feedback_shell_cwd_reset.md) — Shell cwd resets between Bash calls; use pushd/popd when working in other repos
 - [user_alpine_wind_project.md](user_alpine_wind_project.md) — User has a second project (Pow Predictor) at ~/alpine-wind — 3D snow redistribution simulator
 - [reference_claude_config_repo.md](reference_claude_config_repo.md) — Global Claude config synced to edevardHvide/claude-config (public GitHub repo)
+- [feedback_frontend_design_plugin.md](feedback_frontend_design_plugin.md) — Use Anthropic frontend-design plugin for UI work; installed at ~/.claude/skills/frontend-design/
