@@ -1,11 +1,17 @@
 ---
-name: AWS deployment details
-description: Pow Predictor is live on CloudFront with S3 hosting and Lambda NVE proxy
+name: AWS deployment and IaC setup
+description: Pow Predictor AWS infra managed by OpenTofu with separate deploy/admin profiles
 type: project
 ---
 
-App is deployed and live at https://d1y1xbjzzgjck0.cloudfront.net as of 2026-03-24.
+App is deployed and live at https://d1y1xbjzzgjck0.cloudfront.net.
 
-**Why:** Production deployment for public access to the snow redistribution simulator.
+**Infrastructure as Code:** All AWS resources are codified in `infra/` directory using OpenTofu. State stored in `s3://pow-predictor-tfstate` (versioned).
 
-**How to apply:** Use /deploy skill for deployments. AWS profile is `tennis-bot`, region `eu-north-1`. S3 bucket `pow-predictor-frontend`, CloudFront distribution `E1FX2FUC1H43O2`.
+**Two AWS profiles:**
+- `tennis-bot` — admin, used for `tofu plan/apply` and infra management
+- `pow-predictor` — scoped deploy user (S3 sync, CloudFront invalidation, Lambda update, CloudWatch logs only)
+
+**Why:** User wants project infrastructure separated per project, not sharing profiles across apps.
+
+**How to apply:** Use /deploy skill (profile `pow-predictor`) for app deployments. Use `tennis-bot` profile for infra changes via `cd infra && tofu plan/apply`.
