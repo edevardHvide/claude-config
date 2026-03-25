@@ -1,0 +1,7 @@
+- [User Profile](user_profile.md) — Project owner, focused on mobile UX polish and rapid iteration
+- [Feedback: Terse Responses](feedback_terse.md) — User prefers short, direct answers with no trailing summaries
+- [Feedback: Mobile Testing](feedback_mobile_testing.md) — User tests on real mobile device via local network
+- [Feedback: Avoid Wasteful API Calls](feedback_caching.md) — Cache external API data, avoid redundant fetches
+- [Feedback: UI Simplicity](feedback_ui_simplicity.md) — Prefers clean/simple over fancy — no heavy backgrounds on labels
+- [Feedback: Direct Workflow](feedback_direct_workflow.md) — Execute chained commands (pull/push/deploy) without asking, commit implicitly if needed
+- [Feedback: Clean Repo](feedback_clean_repo.md) — Remove unused files/configs, keep git status clean, maintain .gitignore
