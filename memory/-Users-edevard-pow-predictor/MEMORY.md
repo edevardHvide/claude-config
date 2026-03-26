@@ -6,3 +6,4 @@
 - [Feedback: Direct Workflow](feedback_direct_workflow.md) — Execute chained commands (pull/push/deploy) without asking, commit implicitly if needed
 - [Feedback: Clean Repo](feedback_clean_repo.md) — Remove unused files/configs, keep git status clean, maintain .gitignore
 - [Feedback: Deploy Must Commit](feedback_deploy_commit.md) — Always commit pending changes before deploying
+- [Reference: RegObs API v5](reference_regobs_api.md) — v5/Search ignores lat/lng, must use SelectedRegions; top-level response fields
