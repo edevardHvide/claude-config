@@ -1,11 +1,15 @@
 ---
 name: Lambda Deploy Safety
-description: Each Lambda is a separate zip — never deploy wrong file to wrong function, use tennis-bot profile
+description: Each Lambda is a separate zip — use correct profile per operation, verify after deploy
 type: feedback
 ---
 
-Never deploy the wrong Python file to the wrong Lambda function. Each Lambda (`pow-predictor-nve-proxy`, `pow-predictor-conditions-summary`) must get its own `.py` file zipped separately.
+Never deploy the wrong Python file to the wrong Lambda function. Each Lambda (`pow-predictor-nve-proxy`, `pow-predictor-conditions-summary`, `pow-predictor-feedback`) must get its own `.py` file zipped separately.
 
-**Why:** On 2026-03-26, `conditions_summary.py` was accidentally deployed to the NVE proxy Lambda, breaking all weather fetching in production (`Unable to import module 'nve_proxy'`).
+**Profile rules:**
+- `tennis-bot` — for infra changes (tofu plan/apply) and Lambda CODE deploys (`lambda:UpdateFunctionCode`)
+- `pow-predictor` — for S3/CloudFront deploys AND Lambda CONFIGURATION updates (`lambda:UpdateFunctionConfiguration`, `lambda:GetFunctionConfiguration`)
 
-**How to apply:** When deploying Lambda code: (1) use `tennis-bot` profile (not `pow-predictor`), (2) double-check the `--function-name` matches the file being zipped, (3) verify the Lambda works after deploy with a curl test.
+**Why:** User corrected on 2026-03-26: when updating Lambda env vars (e.g. GITHUB_TOKEN), use `pow-predictor` profile — it has the necessary config permissions. Only code deploys need `tennis-bot`.
+
+**How to apply:** (1) Match profile to operation type, (2) double-check `--function-name` matches the file being deployed, (3) verify Lambda works after any change.
