@@ -5,3 +5,4 @@
 - [Feedback: UI Simplicity](feedback_ui_simplicity.md) — Prefers clean/simple over fancy — no heavy backgrounds on labels
 - [Feedback: Direct Workflow](feedback_direct_workflow.md) — Execute chained commands (pull/push/deploy) without asking, commit implicitly if needed
 - [Feedback: Clean Repo](feedback_clean_repo.md) — Remove unused files/configs, keep git status clean, maintain .gitignore
+- [Feedback: Deploy Must Commit](feedback_deploy_commit.md) — Always commit pending changes before deploying
