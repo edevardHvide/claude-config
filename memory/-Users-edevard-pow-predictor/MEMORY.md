@@ -7,3 +7,4 @@
 - [Feedback: Clean Repo](feedback_clean_repo.md) — Remove unused files/configs, keep git status clean, maintain .gitignore
 - [Feedback: Deploy Must Commit](feedback_deploy_commit.md) — Always commit pending changes before deploying
 - [Reference: RegObs API v5](reference_regobs_api.md) — v5/Search ignores lat/lng, must use SelectedRegions; top-level response fields
+- [Feedback: Lambda Deploy Safety](feedback_lambda_deploy.md) — Each Lambda is separate zip, use tennis-bot profile, verify after deploy
