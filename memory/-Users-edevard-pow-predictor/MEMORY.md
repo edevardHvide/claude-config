@@ -9,3 +9,4 @@
 - [Reference: RegObs API v5](reference_regobs_api.md) — v5/Search ignores lat/lng, must use SelectedRegions; top-level response fields
 - [Feedback: Lambda Deploy Safety](feedback_lambda_deploy.md) — Each Lambda is separate zip, use tennis-bot profile, verify after deploy
 - [Feedback: Reuse Over Tune](feedback_reuse_over_tune.md) — Reuse working sim logic rather than tuning physics parameters in isolation
+- [Feedback: Check API Code](feedback_check_api_code.md) — Read API client code before testing endpoints, don't guess URL formats

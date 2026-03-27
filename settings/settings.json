@@ -28,7 +28,16 @@
   },
   "enabledPlugins": {
     "ralph-loop@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "telegram@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
   },
   "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true
