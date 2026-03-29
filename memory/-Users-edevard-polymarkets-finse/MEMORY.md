@@ -1,0 +1,3 @@
+- [CLI over console](feedback_cli_over_console.md) — User prefers CLI scripts over Firebase Console for data ops
+- [Generate from existing](feedback_generate_from_existing.md) — Generate planning artifacts from existing docs, skip interactive questioning
+- [Firebase setup](project_firebase_setup.md) — Project ID, party code FEST, admin code, hosting URL
