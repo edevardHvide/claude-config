@@ -1,3 +1,4 @@
 - [CLI over console](feedback_cli_over_console.md) — User prefers CLI scripts over Firebase Console for data ops
 - [Generate from existing](feedback_generate_from_existing.md) — Generate planning artifacts from existing docs, skip interactive questioning
 - [Firebase setup](project_firebase_setup.md) — Project ID, party code FEST, admin code, hosting URL
+- [Backfill on new features](feedback_backfill_on_new_features.md) — Always handle legacy Firestore docs missing new fields (code + rules fallbacks)
