@@ -5,3 +5,8 @@
 - [Commit before deploy](feedback_commit_before_deploy.md) — Always commit pending changes before deploying
 - [Single source for balance](feedback_single_source_balance.md) — Derive committedStake from one collection, not multiple store values
 - [Bet visibility lifecycle](feedback_bet_visibility_lifecycle.md) — Bets stay in feed through open->pending, don't disappear on pickup
+- [Enforce limits everywhere](feedback_enforce_limits_everywhere.md) — Validation limits must be in HTML input, form validation, AND server-side
+- [Balance sync](feedback_balance_sync.md) — Every component showing available balance must use identical committedStake logic
+- [Use shared UI](feedback_use_shared_ui.md) — Always use Button/Modal/Input/Card from src/ui/, never inline Tailwind duplicates
+- [Confirm destructive actions](feedback_confirm_destructive_actions.md) — Admin destructive actions need confirmation modal before executing
+- [Post-refactor architecture](project_architecture_v2.md) — Feature-based folders, shared UI, React Router, PolyParty name

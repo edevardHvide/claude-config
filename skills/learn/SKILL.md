@@ -1,6 +1,6 @@
 ---
 name: learn
-description: Capture session learnings into CLAUDE.md, memory files, and sync to the claude-config GitHub repo
+description: Capture session learnings into CLAUDE.md, memory files, second brain wiki, and sync to the claude-config GitHub repo
 user_invocable: true
 ---
 
@@ -40,7 +40,29 @@ Save learnings to `~/.claude/projects/<project-key>/memory/`:
 
 Check existing memories first — update rather than duplicate. Update `MEMORY.md` index.
 
-### 4. Sync to claude-config Repo
+### 4. Second Brain Wiki Check
+
+Scan the session for professional knowledge worth persisting beyond this project:
+- New concepts, frameworks, or mental models encountered
+- Tool/technique insights that apply broadly (not project-specific config)
+- Architectural patterns worth remembering across projects
+- Surprising findings or non-obvious lessons learned
+
+If anything qualifies, update `~/second-brain/wiki/`:
+- Create or update pages in `entities/`, `concepts/`, `sources/`, or `synthesis/`
+- Add `[[wikilinks]]` cross-references to related existing pages
+- Update `wiki/index.md` with new/changed pages
+- Append entry to `wiki/log.md`
+- Follow the schema in `~/second-brain/CLAUDE.md`
+
+Then commit:
+```bash
+cd ~/second-brain && git add -A && git commit -m "learn: <brief description of what was added>"
+```
+
+Most sessions will have nothing wiki-worthy — skip this step if so. Project-specific gotchas belong in CLAUDE.md and memory, not the wiki.
+
+### 5. Sync to claude-config Repo
 
 The global config repo lives at `/Users/edevard/claude-config` (GitHub: `edevardHvide/claude-config`).
 
@@ -62,7 +84,7 @@ for dir in ~/.claude/projects/*/memory; do
 done
 ```
 
-### 5. Commit and Push
+### 6. Commit and Push
 
 ```bash
 cd /Users/edevard/claude-config
